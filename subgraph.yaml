@@ -13,7 +13,7 @@ dataSources:
       # address: '0x1a9556E3a08751F503F23E29205559fda8a9f603'
       # startBlock: 10502042
       # espaceTest
-      address: 0x76382721A39335f44A97dAfF27A8119d1516347D
+      address: '0x76382721A39335f44A97dAfF27A8119d1516347D'
       startBlock: 71625119
       abi: Gravity
     mapping:
