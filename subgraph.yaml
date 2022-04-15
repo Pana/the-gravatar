@@ -8,7 +8,13 @@ dataSources:
     name: Gravity
     network: mainnet
     source:
-      address: '0x2E645469f354BB4F5c8a05B3b30A929361cf77eC'
+      # address: '0x8d2Df2a316769EEC22ca3Cb78295542D4a325eBB'
+      # Rinkeby
+      # address: '0x1a9556E3a08751F503F23E29205559fda8a9f603'
+      # startBlock: 10502042
+      # espaceTest
+      address: 0x76382721A39335f44A97dAfF27A8119d1516347D
+      startBlock: 71625119
       abi: Gravity
     mapping:
       kind: ethereum/events
@@ -16,6 +22,7 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - Gravatar
+        - Block
       abis:
         - name: Gravity
           file: ./abis/Gravity.json
@@ -24,4 +31,6 @@ dataSources:
           handler: handleNewGravatar
         - event: UpdatedGravatar(uint256,address,string,string)
           handler: handleUpdatedGravatar
+      blockHandlers:
+        - handler: handleBlock 
       file: ./src/mapping.ts

@@ -5,16 +5,17 @@
     "build-contract": "solc contracts/Gravity.sol --abi -o abis --overwrite && solc contracts/Gravity.sol --bin -o bin --overwrite",
     "create": "graph create pana/trygravatar --node https://api.thegraph.com/deploy/",
     "create-local": "graph create pana/trygravatar --node http://127.0.0.1:8020",
+    "deploy-local": "graph deploy pana/trygravatar --ipfs http://127.0.0.1:5001 --node http://127.0.0.1:8020",
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy pana/trygravatar --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
-    "deploy-local": "graph deploy pana/trygravatar --ipfs http://127.0.0.1:5001 --node http://127.0.0.1:8020"
+    "deploy": "graph deploy pana/trygravatar --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/"
   },
   "devDependencies": {
     "@graphprotocol/graph-cli": "^0.28.1",
     "@graphprotocol/graph-ts": "^0.26.0"
   },
   "dependencies": {
+    "@truffle/hdwallet-provider": "^2.0.6",
     "babel-polyfill": "^6.26.0",
     "babel-register": "^6.26.0",
     "truffle": "^5.0.4",

@@ -9,7 +9,7 @@ module.exports = async function(deployer) {
   await registry.createGravatar('Carl', 'https://thegraph.com/img/team/team_04.png', {
     from: accounts[0],
   })
-  await registry.createGravatar('Lucas', 'https://thegraph.com/img/team/bw_Lucas.jpg', {
+  /* await registry.createGravatar('Lucas', 'https://thegraph.com/img/team/bw_Lucas.jpg', {
     from: accounts[1],
-  })
+  }) */
 }
